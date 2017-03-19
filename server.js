@@ -53,13 +53,13 @@ function createTemplate (data) {
     </body>
     </html>
 `
-    
+    return HTMLtemplate;
 }
 
 app.get('/article/:articleName', function (req, res){
     pool,query("SELECT * FROM article WHERE title = '" + req.params.articleName + "'", function (req, res) {
         if(err) {
-            res,status(500).send(err.toString());
+            res.status(500).send(err.toString());
         }
         else {
             if (result.rows.length === 0) {
@@ -67,7 +67,7 @@ app.get('/article/:articleName', function (req, res){
             }
             else{
                 var aticleData = result.rows[0];
-                res.send(createTemplate(create));          
+                res.send(createTemplate(articleData));          
             }
         }
     });
