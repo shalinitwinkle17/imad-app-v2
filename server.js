@@ -20,7 +20,7 @@ app.get('/test-db',function(req, res){
             res.send(JSON.stringify(result.rows));
         }
     });
-})
+});
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
@@ -41,13 +41,13 @@ function createTemplate (data) {
                 <a href="/">Home</a>
             </div>
             <h2>
-                $(data.heading)
+                ${data.heading}
             </h2>
             <div>
-                $(data.date)
+                ${data.date}
             </div>
             <div>
-                $(data.content)
+                ${data.content}
             </div>
         </div>
     </body>
