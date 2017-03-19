@@ -34,16 +34,21 @@ function createTemplate (data) {
             </title>
             <meta name="viewport" content="width=device-width, initial-scale=1"/>
             <link href="/ui/style.css" rel="stylesheet" />
-            .box {
-                    max-width: 800px;
-                    margin: 0 auto;
-                    color: white;
-                    font-family: sans-serif;
-                    padding-top: 50px;
-                    padding-left: 10px;
-                    padding-right: 10px;
-
-            }
+            <style>
+                body {
+                    background-color:#47476d;
+                }
+                .box {
+                        max-width: 800px;
+                        margin: 0 auto;
+                        color: white;
+                        font-family: sans-serif;
+                        padding-top: 50px;
+                        padding-left: 10px;
+                        padding-right: 10px;
+    
+                }
+            </style>
         </head>
         <body>
         <div class="box">
